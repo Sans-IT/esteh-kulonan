@@ -1,0 +1,35 @@
+/**
+ * Palet "Es Teh Kulonan" — terinspirasi warna batik sogan (coklat-maroon),
+ * gilding gunungan wayang (emas), dan rice-paper cream.
+ *
+ * Font TIDAK diubah — tetap pakai font default dari layout/preset shadcn
+ * kamu. File ini hanya menambahkan token warna.
+ *
+ * Cara pasang: tempel blok :root ini ke dalam globals.css kamu (di luar
+ * blok @theme yang sudah dibuat shadcn init), atau import file ini
+ * langsung di app/layout.tsx:
+ *   import "./brand-theme.css";
+ */
+
+:root,
+.dark {
+  color-scheme: light;
+
+  --color-background: #faf3e7;
+  --color-foreground: #2b1810;
+  --color-primary: #6b2e1f;
+  --color-primary-foreground: #faf3e7;
+  --color-secondary: #c9a227;
+  --color-secondary-foreground: #2b1810;
+  --color-accent: #3f5b3d;
+  --color-muted: #efe3cc;
+  --color-border: #ddc9a3;
+
+  --gunungan-line: #faf3e7;
+}
+
+/* Website ini sengaja dikunci ke light mode saja, terlepas dari
+   preferensi sistem atau toggle dark mode di project starter-mu. */
+html {
+  color-scheme: light only;
+}
