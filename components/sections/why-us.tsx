@@ -23,7 +23,7 @@ export function WhyUs() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
           Kenapa Memilih Kami
         </p>
-        <h2 className="mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
+        <h2 className="font-heading mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
           Kenapa Memilih Es Teh Kulonan?
         </h2>
       </div>
@@ -32,7 +32,7 @@ export function WhyUs() {
         {reasons.map((r, i) => (
           <div key={r.title} className="relative pl-14">
             <GununganIcon className="absolute left-0 top-0 h-10 w-9 text-[var(--color-primary)]" />
-            <h3 className="text-lg font-semibold text-[var(--color-foreground)]">
+            <h3 className="font-heading text-lg font-semibold text-[var(--color-foreground)]">
               {i + 1}. {r.title}
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-foreground)]/65">

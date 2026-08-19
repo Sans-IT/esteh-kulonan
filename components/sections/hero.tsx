@@ -15,7 +15,7 @@ export function Hero() {
             Asli Solo · Sejak 2022
           </span>
 
-          <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight text-[var(--color-foreground)] sm:text-5xl">
+          <h1 className="font-heading mt-6 text-4xl font-semibold leading-[1.08] tracking-tight text-[var(--color-foreground)] sm:text-5xl">
             Es Teh Kulonan
             <span className="mt-2 block text-[var(--color-primary)]">
               Diracik Lokal, Resep Khas, Cita Rasa Istimewa

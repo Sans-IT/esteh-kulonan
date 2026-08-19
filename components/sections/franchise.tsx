@@ -12,7 +12,7 @@ export function Franchise() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
             Paket Franchise
           </p>
-          <h2 className="mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
+          <h2 className="font-heading mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
             Mulai Usaha Minumanmu Sendiri
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[var(--color-foreground)]/65">
@@ -31,7 +31,7 @@ export function Franchise() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-secondary)]">
                   {pkg.tagline}
                 </p>
-                <h3 className="mt-1 text-2xl font-semibold text-[var(--color-foreground)]">
+                <h3 className="font-heading mt-1 text-2xl font-semibold text-[var(--color-foreground)]">
                   {pkg.name}
                 </h3>
                 <p className="mt-2 text-3xl font-semibold text-[var(--color-primary)]">
@@ -49,7 +49,7 @@ export function Franchise() {
               </ul>
 
               <DriveMedia
-                mediaKey={pkg.name === "Paket A" ? "franchisePaketA" : "franchisePaketB"}
+                mediaKey={pkg.name.startsWith("Paket A") ? "franchisePaketA" : "franchisePaketB"}
                 aspect="aspect-video"
                 label={`Foto gerai — spesifikasi ${pkg.name}`}
               />

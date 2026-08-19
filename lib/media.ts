@@ -28,7 +28,7 @@ export const driveMedia = {
 
   // Folder Drive: "Best seller teh kulonan" — foto per menu best seller
   bestSellerOriJumbo: "",
-  bestSellerTehLeci: "",
+  bestSellerTehLeci: "1v5BlT0Gmkt5-_O8kb6qOyrHl0waRUZ-9", // best seller es teh leci 6 ribu
   bestSellerLecyMilkTea: "",
   bestSellerLemonTea: "",
   bestSellerLemonTeaHoney: "",
@@ -41,7 +41,10 @@ export const driveMedia = {
 export type DriveMediaKey = keyof typeof driveMedia;
 
 export function driveImageUrl(fileId: string) {
-  return `https://drive.google.com/uc?export=view&id=${fileId}`;
+  // Format ini lebih stabil untuk ditampilkan langsung sebagai <img>
+  // dibanding drive.google.com/uc?export=view (sering kena halaman
+  // peringatan scan virus untuk file besar).
+  return `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
 }
 
 export function driveVideoEmbedUrl(fileId: string) {

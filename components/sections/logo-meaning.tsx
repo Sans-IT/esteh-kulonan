@@ -28,7 +28,7 @@ export function LogoMeaning() {
           <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
             Makna di Balik Logo
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
+          <h2 className="font-heading mt-2 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
             Simbol Gunungan, Akar Budaya Solo
           </h2>
         </div>
@@ -36,7 +36,7 @@ export function LogoMeaning() {
         <div className="mt-12 grid gap-8 sm:grid-cols-2">
           {points.map((p) => (
             <div key={p.title} className="border-l-2 border-[var(--color-secondary)] pl-5">
-              <h3 className="text-base font-semibold text-[var(--color-foreground)]">
+              <h3 className="font-heading text-base font-semibold text-[var(--color-foreground)]">
                 {p.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-foreground)]/65">

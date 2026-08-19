@@ -1,10 +1,24 @@
 export const WA_NUMBER = "6281299960009";
+export const PHONE_DISPLAY = "0812-9996-0009";
+
+// Alamat asal berdirinya Es Teh Kulonan (2022), sesuai brief Drive.
+// Titik jualan lengkap ada di halaman /cabang (10 lokasi).
+export const HQ_ADDRESS = "Pasar Cerme, Kec. Cerme, Kabupaten Gresik, Jawa Timur";
+
+// Belum ada akun media sosial resmi di brief/Drive klien — isi linknya
+// di sini kalau sudah ada, ikon otomatis tampil di footer begitu diisi.
+export const socials = {
+  instagram: "",
+  tiktok: "",
+  facebook: "",
+};
 
 export function waLink(message: string) {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 export type MenuItem = {
+  id: string;
   name: string;
   price: number;
   size: string; // cb, ck, cr, cm
@@ -16,7 +30,11 @@ export type MenuCategory = {
   items: MenuItem[];
 };
 
-export const menuData: MenuCategory[] = [
+function slugify(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+const rawMenuData: { category: string; items: Omit<MenuItem, "id">[] }[] = [
   {
     category: "Ori",
     items: [
@@ -82,9 +100,18 @@ export const menuData: MenuCategory[] = [
   },
 ];
 
+export const menuData: MenuCategory[] = rawMenuData.map((cat) => ({
+  category: cat.category,
+  items: cat.items.map((item) => ({ ...item, id: slugify(item.name) })),
+}));
+
 export const bestSellers = menuData
   .flatMap((c) => c.items.map((i) => ({ ...i, category: c.category })))
   .filter((i) => i.bestSeller);
+
+export const allMenuItems = menuData.flatMap((c) =>
+  c.items.map((i) => ({ ...i, category: c.category }))
+);
 
 export type Branch = {
   name: string;
@@ -149,13 +176,13 @@ export const branches: Branch[] = [
 
 export const franchisePackages = [
   {
-    name: "Paket A",
+    name: "Paket A (Ekonomis)",
     tagline: "Paket Ekonomis",
     price: "Rp 3.000.000",
     features: ["Free ongkir", "Portable", "Bahan baku free 150 porsi", "Siap jualan"],
   },
   {
-    name: "Paket B",
+    name: "Paket B (Jos)",
     tagline: "Paket Jos",
     price: "Rp 15.000.000",
     features: [

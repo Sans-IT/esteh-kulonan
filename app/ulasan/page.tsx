@@ -1,16 +1,16 @@
 import { Navbar } from "@/components/sections/navbar";
-import { CartView } from "@/components/sections/cart-view";
+import { Reviews } from "@/components/sections/reviews";
 import { Footer } from "@/components/sections/footer";
 
 export const metadata = {
-  title: "Order — Es Teh Kulonan",
+  title: "Ulasan — Es Teh Kulonan",
 };
 
-export default function OrderPage() {
+export default function UlasanPage() {
   return (
     <main className="bg-[var(--color-background)] text-[var(--color-foreground)]">
       <Navbar />
-      <CartView />
+      <Reviews />
       <Footer />
     </main>
   );

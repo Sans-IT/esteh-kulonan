@@ -5,7 +5,7 @@ export function BrandStory() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
           Awal Didirikan
         </p>
-        <h2 className="mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
+        <h2 className="font-heading mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
           Berawal dari Pasar Cerme, Gresik
         </h2>
         <p className="mt-5 text-base leading-relaxed text-[var(--color-foreground)]/70">

@@ -30,7 +30,7 @@ export function OrderSteps() {
         <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em]">
           Order
         </p>
-        <h1 className="mt-2 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
+        <h1 className="font-heading mt-2 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
           Pesan Es Teh Kulonan
         </h1>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-[var(--color-foreground)]/65">
@@ -43,7 +43,7 @@ export function OrderSteps() {
         {steps.map((s) => (
           <Card key={s.title} className="border-[var(--color-border)] p-6">
             <s.icon className="h-6 w-6 text-[var(--color-primary)]" />
-            <h3 className="mt-4 text-base font-semibold text-[var(--color-foreground)]">
+            <h3 className="font-heading mt-4 text-base font-semibold text-[var(--color-foreground)]">
               {s.title}
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-foreground)]/65">

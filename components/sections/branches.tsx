@@ -10,7 +10,7 @@ export function Branches() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em]">
             Cabang Kami
           </p>
-          <h2 className="mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
+          <h2 className="font-heading mt-3 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
             Kunjungi Gerai Terdekat
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[var(--color-foreground)]/65">

@@ -5,12 +5,14 @@ import { Hero } from "@/components/sections/hero";
 import { BrandStory } from "@/components/sections/brand-story";
 import { WhyUs } from "@/components/sections/why-us";
 import { MenuHighlight } from "@/components/sections/menu-highlight";
+import { ReviewsPreview } from "@/components/sections/reviews-preview";
 import { Footer } from "@/components/sections/footer";
 import { GununganIcon } from "@/components/gunungan-icon";
 
 const ctaLinks = [
   { href: "/tentang", label: "Tentang Kami", desc: "Cerita, makna logo, dan tim di balik Es Teh Kulonan" },
   { href: "/menu", label: "Menu & Harga", desc: "Semua varian teh, kopi, dan best seller" },
+  { href: "/ulasan", label: "Ulasan", desc: "Lihat & tulis pengalamanmu bersama kami" },
   { href: "/cabang", label: "Cabang Terdekat", desc: "10 titik jualan di sekitar Gresik" },
   { href: "/order", label: "Cara Order", desc: "Pesan langsung lewat WhatsApp" },
 ];
@@ -23,11 +25,12 @@ export default function Home() {
       <BrandStory />
       <WhyUs />
       <MenuHighlight />
+      <ReviewsPreview />
 
       <section className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
         <div className="text-center">
           <GununganIcon className="mx-auto h-9 w-8 text-[var(--color-primary)]" />
-          <h2 className="mt-4 text-2xl font-semibold sm:text-3xl">Jelajahi Lebih Lanjut</h2>
+          <h2 className="font-heading mt-4 text-2xl font-semibold sm:text-3xl">Jelajahi Lebih Lanjut</h2>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {ctaLinks.map((c) => (
