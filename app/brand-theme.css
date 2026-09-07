@@ -1,11 +1,10 @@
 /**
  * Palet "Es Teh Kulonan" — tema kuning/keemasan, terinspirasi gilding
- * gunungan wayang. Dikunci light mode saja (lihat .dark di bawah,
- * disamakan sengaja dengan :root).
+ * gunungan wayang. Sekarang mendukung dark mode asli (lihat .dark di
+ * bawah) — light/dark/system diatur lewat <ThemeToggle /> di navbar.
  */
 
-:root,
-.dark {
+:root {
   color-scheme: light;
 
   --color-background: #fffdf5;
@@ -21,6 +20,57 @@
   --gunungan-line: #fffdf5;
 }
 
+.dark {
+  color-scheme: dark;
+
+  --color-background: #1c1608;
+  --color-foreground: #fdf6e3;
+  --color-primary: #eab308;
+  --color-primary-foreground: #241a00;
+  --color-secondary: #3a2e0f;
+  --color-secondary-foreground: #fde68a;
+  --color-accent: #facc15;
+  --color-muted: #2a2110;
+  --color-border: #3a2e10;
+
+  --gunungan-line: #1c1608;
+}
+
 html {
-  color-scheme: light only;
+  color-scheme: light dark;
+}
+
+/* Marquee ulasan di beranda (hanya tampil kalau ada ulasan). */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Carousel cabang (peta) — bisa discroll/swipe tapi scrollbar disembunyikan
+   supaya tampilan tetap rapi di desktop maupun mobile. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

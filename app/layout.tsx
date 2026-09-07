@@ -5,6 +5,8 @@ import "./globals.css"
 import "./brand-theme.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { CartProvider } from "@/lib/cart-context"
+import { QueryProvider } from "@/lib/query-provider"
+import { CustomerServiceChat } from "@/components/sections/customer-service-chat"
 import { cn } from "@/lib/utils";
 
 const dmSerifDisplay = localFont({
@@ -42,9 +44,14 @@ export default function RootLayout({
       className={cn("antialiased", fontSans.variable, "font-mono", jetbrainsMono.variable, dmSerifDisplay.variable)}
     >
       <body>
-        <ThemeProvider>
-          <CartProvider>{children}</CartProvider>
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider>
+            <CartProvider>
+              {children}
+              <CustomerServiceChat />
+            </CartProvider>
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   )

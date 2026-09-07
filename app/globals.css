@@ -40,37 +40,37 @@
 }
 
 .dark {
-    /* Sengaja disamakan dengan :root — website ini dikunci light mode saja. */
-    --background: oklch(0.99 0.015 95);
-    --foreground: oklch(0.24 0.05 75);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.24 0.05 75);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.24 0.05 75);
+    /* Tema gelap khas: coklat-hitam hangat, aksen keemasan tetap senada brand. */
+    --background: oklch(0.19 0.02 70);
+    --foreground: oklch(0.94 0.02 90);
+    --card: oklch(0.23 0.025 70);
+    --card-foreground: oklch(0.94 0.02 90);
+    --popover: oklch(0.23 0.025 70);
+    --popover-foreground: oklch(0.94 0.02 90);
     --primary: oklch(0.795 0.17 86);
-    --primary-foreground: oklch(0.24 0.06 70);
-    --secondary: oklch(0.97 0.04 96);
-    --secondary-foreground: oklch(0.3 0.06 70);
-    --muted: oklch(0.965 0.035 96);
-    --muted-foreground: oklch(0.5 0.06 75);
-    --accent: oklch(0.88 0.15 92);
-    --accent-foreground: oklch(0.28 0.06 70);
+    --primary-foreground: oklch(0.2 0.04 70);
+    --secondary: oklch(0.28 0.03 75);
+    --secondary-foreground: oklch(0.92 0.03 90);
+    --muted: oklch(0.26 0.025 72);
+    --muted-foreground: oklch(0.72 0.03 85);
+    --accent: oklch(0.4 0.08 80);
+    --accent-foreground: oklch(0.95 0.02 90);
     --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(0.9 0.05 90);
-    --input: oklch(0.9 0.05 90);
+    --border: oklch(0.32 0.03 75);
+    --input: oklch(0.32 0.03 75);
     --ring: oklch(0.795 0.17 86);
     --chart-1: oklch(0.795 0.17 86);
     --chart-2: oklch(0.7 0.16 70);
     --chart-3: oklch(0.6 0.14 60);
     --chart-4: oklch(0.85 0.12 95);
     --chart-5: oklch(0.5 0.1 55);
-    --sidebar: oklch(0.97 0.03 96);
-    --sidebar-foreground: oklch(0.24 0.05 75);
+    --sidebar: oklch(0.21 0.025 72);
+    --sidebar-foreground: oklch(0.94 0.02 90);
     --sidebar-primary: oklch(0.795 0.17 86);
-    --sidebar-primary-foreground: oklch(0.24 0.06 70);
-    --sidebar-accent: oklch(0.94 0.05 92);
-    --sidebar-accent-foreground: oklch(0.3 0.06 70);
-    --sidebar-border: oklch(0.9 0.05 90);
+    --sidebar-primary-foreground: oklch(0.2 0.04 70);
+    --sidebar-accent: oklch(0.3 0.03 75);
+    --sidebar-accent-foreground: oklch(0.92 0.03 90);
+    --sidebar-border: oklch(0.32 0.03 75);
     --sidebar-ring: oklch(0.795 0.17 86);
 }
 

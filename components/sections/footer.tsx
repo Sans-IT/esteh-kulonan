@@ -1,21 +1,21 @@
 import Link from "next/link";
-import { MessageCircle, Phone, MapPin, AArrowDown as Instagram, Music2, ALargeSmall as Facebook } from "lucide-react";
-import { GununganIcon } from "@/components/gunungan-icon";
-import { waLink, WA_NUMBER, PHONE_DISPLAY, HQ_ADDRESS, socials } from "@/lib/data";
+import { MessageCircle, Phone, MapPin, Music2 } from "lucide-react";
+import { InstagramIcon, FacebookIcon } from "@/components/icons/social-icons";
+import { Logo } from "@/components/logo";
+import { orderLink, WA_NUMBER, PHONE_DISPLAY, HQ_ADDRESS, socials } from "@/lib/data";
 
 const navLinks = [
   { href: "/tentang", label: "Tentang" },
   { href: "/menu", label: "Menu" },
   { href: "/ulasan", label: "Ulasan" },
-  { href: "/order", label: "Order" },
   { href: "/cabang", label: "Cabang" },
   { href: "/franchise", label: "Franchise" },
 ];
 
 const socialLinks = [
-  { key: "instagram", href: socials.instagram, icon: Instagram, label: "Instagram" },
+  { key: "instagram", href: socials.instagram, icon: InstagramIcon, label: "Instagram" },
   { key: "tiktok", href: socials.tiktok, icon: Music2, label: "TikTok" },
-  { key: "facebook", href: socials.facebook, icon: Facebook, label: "Facebook" },
+  { key: "facebook", href: socials.facebook, icon: FacebookIcon, label: "Facebook" },
 ].filter((s) => s.href);
 
 export function Footer() {
@@ -25,8 +25,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2.5">
-              <GununganIcon className="h-8 w-7 text-[var(--color-secondary)]" />
-              <p className="font-heading text-lg font-semibold">Es Teh Kulonan</p>
+              <Logo className="h-10" />
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-primary-foreground)]/70">
               Minuman teh tradisional khas Solo — autentik, berkualitas, dan
@@ -91,13 +90,13 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-primary-foreground)]/60">
               Pesan Langsung
             </p>
-            <a
-              href={waLink("Halo, saya mau tanya-tanya tentang Es Teh Kulonan")}
+            <Link
+              href={orderLink()}
               className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--color-secondary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-secondary-foreground)] transition-opacity hover:opacity-90"
             >
               <MessageCircle className="h-4 w-4" />
-              Chat WhatsApp
-            </a>
+              Pesan Sekarang
+            </Link>
           </div>
         </div>
 

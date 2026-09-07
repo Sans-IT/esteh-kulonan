@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { MessageCircle, MapPin, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { GununganIcon } from "@/components/gunungan-icon";
-import { menuAndalan, waLink } from "@/lib/data";
+import { menuAndalan, orderLink } from "@/lib/data";
 
 const steps = [
   {
@@ -17,8 +18,8 @@ const steps = [
   },
   {
     icon: MessageCircle,
-    title: "3. Chat via WhatsApp",
-    desc: "Kirim pesan berisi menu, jumlah, dan cabang pilihanmu — tim kami balas cepat.",
+    title: "3. Review & Kirim di Halaman Order",
+    desc: "Cek ringkasan pesanan di halaman Order, lalu kirim langsung ke WA cabang pilihanmu.",
   },
 ];
 
@@ -34,8 +35,8 @@ export function OrderSteps() {
           Pesan Es Teh Kulonan
         </h1>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-[var(--color-foreground)]/65">
-          Belum ada layanan pesan-antar online — semua pemesanan dilayani
-          langsung lewat WhatsApp, tinggal chat tim kami.
+          Susun pesananmu di halaman Order, pilih cabang tujuan, lalu kirim
+          langsung ke WhatsApp cabang tersebut — cepat dan tanpa ribet.
         </p>
       </div>
 
@@ -65,7 +66,7 @@ export function OrderSteps() {
               variant="outline"
               className="border-[var(--color-primary-foreground)]/25 bg-transparent text-[var(--color-primary-foreground)] hover:bg-[var(--color-primary-foreground)]/10"
             >
-              <a href={waLink(`Halo, saya mau pesan ${m}`)}>{m}</a>
+              <Link href="/menu">{m}</Link>
             </Button>
           ))}
         </div>
@@ -74,10 +75,10 @@ export function OrderSteps() {
           size="lg"
           className="mt-8 bg-[var(--color-secondary)] text-[var(--color-primary)] hover:bg-[var(--color-secondary)]/90"
         >
-          <a href={waLink("Halo, saya mau pesan Es Teh Kulonan")}>
+          <Link href={orderLink()}>
             <MessageCircle className="mr-2 h-4 w-4" />
-            Chat WhatsApp Sekarang
-          </a>
+            Buka Halaman Order
+          </Link>
         </Button>
       </div>
     </section>

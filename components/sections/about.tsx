@@ -1,9 +1,12 @@
 import { DriveMedia } from "@/components/drive-media";
+import { FadeInView } from "@/components/motion/fade-in-view";
+import { driveVideos, drivePhotos } from "@/lib/media";
 
 export function About() {
   return (
     <section className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
-      <div className="grid gap-12 md:grid-cols-2 md:items-start">
+      <FadeInView>
+        <div className="grid gap-12 md:grid-cols-2 md:items-start">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
             Tentang Kami
@@ -20,9 +23,8 @@ export function About() {
 
           <div className="mt-8">
             <DriveMedia
-              mediaKey="teamVideo"
+              fileId={driveVideos.teamVideo}
               type="video"
-              aspect="aspect-video"
               label="Video tim Es Teh Kulonan"
             />
           </div>
@@ -30,18 +32,19 @@ export function About() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           <DriveMedia
-            mediaKey="teamPhoto1"
+            fileId={drivePhotos.teamPhoto1}
             label="Foto tim Es Teh Kulonan"
             aspect="aspect-[3/4]"
             className="sm:mt-8"
           />
           <DriveMedia
-            mediaKey="storePhoto"
+            fileId={drivePhotos.storePhoto}
             label="Foto gerai Es Teh Kulonan"
             aspect="aspect-[3/4]"
           />
         </div>
       </div>
+      </FadeInView>
     </section>
   );
 }

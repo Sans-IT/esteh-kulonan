@@ -1,5 +1,7 @@
 import { GununganIcon } from "@/components/gunungan-icon";
 import { DriveMedia } from "@/components/drive-media";
+import { FadeInView } from "@/components/motion/fade-in-view";
+import { driveVideos } from "@/lib/media";
 
 const reasons = [
   {
@@ -19,6 +21,7 @@ const reasons = [
 export function WhyUs() {
   return (
     <section className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
+      <FadeInView>
       <div className="text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
           Kenapa Memilih Kami
@@ -44,13 +47,14 @@ export function WhyUs() {
 
       <div className="mt-14">
         <DriveMedia
-          mediaKey="whyUsVideo"
+          fileId={driveVideos.whyUsVideo}
           type="video"
-          aspect="aspect-[21/9]"
+          autoplay
           label="Video produk — gambar Sprite series, sesuai brief 'Kenapa memilih Es Teh Kulonan'"
           className="mx-auto max-w-4xl"
         />
       </div>
+      </FadeInView>
     </section>
   );
 }

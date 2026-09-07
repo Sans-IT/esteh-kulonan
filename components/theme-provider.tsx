@@ -3,8 +3,7 @@
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 
-// Website ini dikunci ke light mode saja — tidak ada toggle atau
-// deteksi preferensi sistem untuk dark mode.
+// Dark / Light / System — toggle-nya ada di <ThemeToggle /> (navbar).
 function ThemeProvider({
   children,
   ...props
@@ -12,9 +11,8 @@ function ThemeProvider({
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="light"
-      forcedTheme="light"
-      enableSystem={false}
+      defaultTheme="system"
+      enableSystem
       disableTransitionOnChange
       {...props}
     >

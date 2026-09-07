@@ -14,7 +14,7 @@ const ctaLinks = [
   { href: "/menu", label: "Menu & Harga", desc: "Semua varian teh, kopi, dan best seller" },
   { href: "/ulasan", label: "Ulasan", desc: "Lihat & tulis pengalamanmu bersama kami" },
   { href: "/cabang", label: "Cabang Terdekat", desc: "10 titik jualan di sekitar Gresik" },
-  { href: "/order", label: "Cara Order", desc: "Pesan langsung lewat WhatsApp" },
+  { href: "/franchise", label: "Franchise", desc: "Mulai usaha minuman sendiri, 2 paket siap jalan" },
 ];
 
 export default function Home() {

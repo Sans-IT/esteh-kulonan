@@ -17,6 +17,26 @@ export function waLink(message: string) {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
+export function waLinkTo(number: string, message: string) {
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+}
+
+// Semua CTA "pesan"/"chat WA" di seluruh situs diarahkan ke halaman
+// /order (bukan langsung ke wa.me) supaya user bisa review pesanan dulu.
+// Query param dipakai untuk pre-fill form di /order:
+// - cabang  : nama cabang terpilih
+// - wa      : nomor WA tujuan (khusus cabang itu)
+// - address : alamat yang otomatis terisi di input alamat
+export function orderLink(params?: { cabang?: string; wa?: string; address?: string }) {
+  if (!params) return "/order";
+  const qs = new URLSearchParams();
+  if (params.cabang) qs.set("cabang", params.cabang);
+  if (params.wa) qs.set("wa", params.wa);
+  if (params.address) qs.set("address", params.address);
+  const query = qs.toString();
+  return query ? `/order?${query}` : "/order";
+}
+
 export type MenuItem = {
   id: string;
   name: string;
@@ -178,13 +198,15 @@ export const franchisePackages = [
   {
     name: "Paket A (Ekonomis)",
     tagline: "Paket Ekonomis",
-    price: "Rp 3.000.000",
+    originalPrice: "Rp 5.000.000",
+    price: "Rp 4.500.000",
     features: ["Free ongkir", "Portable", "Bahan baku free 150 porsi", "Siap jualan"],
   },
   {
     name: "Paket B (Jos)",
     tagline: "Paket Jos",
-    price: "Rp 15.000.000",
+    originalPrice: "Rp 20.000.000",
+    price: "Rp 17.000.000",
     features: [
       "Free ongkir",
       "Bahan baku free 500 porsi",
