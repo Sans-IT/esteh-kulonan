@@ -8,7 +8,6 @@ type DriveMediaProps = {
   type?: "image" | "video"
   className?: string
   aspect?: string // tailwind aspect-* class
-  autoplay?: boolean // khusus video: coba autoplay (dipakai di Beranda)
 }
 
 /**
@@ -17,10 +16,8 @@ type DriveMediaProps = {
  * placeholder bergaris putus-putus supaya jelas apa yang masih ditunggu.
  *
  * Video pakai iframe preview bawaan Drive (paling reliable, langsung ada
- * thumbnail + tombol play tanpa perlu setup lain). Untuk video di
- * Beranda, `autoplay` menambahkan ?autoplay=1 ke iframe-nya — ini bukan
- * fitur resmi dari Google jadi hasilnya bisa beda-beda tergantung
- * browser.
+ * thumbnail + tombol play tanpa perlu setup lain). Semua video tampil
+ * normal — user klik play sendiri, tidak ada yang autoplay.
  */
 export function DriveMedia({
   fileId,
@@ -28,7 +25,6 @@ export function DriveMedia({
   type = "image",
   className,
   aspect = "aspect-video",
-  autoplay = false,
 }: DriveMediaProps) {
   if (!fileId) {
     const Icon = type === "video" ? PlayCircle : ImageIcon
@@ -52,8 +48,7 @@ export function DriveMedia({
     return (
       <div className={cn("overflow-hidden rounded-2xl", aspect, className)}>
         <iframe
-          src={driveVideoEmbedUrl(fileId, autoplay)}
-          allow="autoplay"
+          src={driveVideoEmbedUrl(fileId)}
           className="h-full w-full"
           title={label}
         />

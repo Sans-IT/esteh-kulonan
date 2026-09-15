@@ -4,7 +4,12 @@ import { Card } from "@/components/ui/card"
 import { DriveMedia } from "@/components/drive-media"
 import { FadeInView } from "@/components/motion/fade-in-view"
 import { drivePhotos } from "@/lib/media"
-import { franchisePackages, waLink } from "@/lib/data"
+import {
+  franchisePackages,
+  waLinkTo,
+  FRANCHISE_WA_NUMBER,
+  FRANCHISE_PHONE_DISPLAY,
+} from "@/lib/data"
 
 export function Franchise() {
   return (
@@ -21,6 +26,15 @@ export function Franchise() {
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[var(--color-foreground)]/65">
               Paket franchise hadir sebagai solusi bagi kamu yang ingin memulai
               usaha minuman dengan lebih mudah, lengkap, dan siap jalan.
+            </p>
+            <p className="mt-3 text-sm text-[var(--color-foreground)]/65">
+              Info & konsultasi Franchise:{" "}
+              <a
+                href={waLinkTo(FRANCHISE_WA_NUMBER, "Halo, saya tertarik dengan Franchise Es Teh Kulonan")}
+                className="font-semibold text-[var(--color-primary)] hover:underline"
+              >
+                {FRANCHISE_PHONE_DISPLAY}
+              </a>
             </p>
           </div>
         </FadeInView>
@@ -82,7 +96,8 @@ export function Franchise() {
                   className="mt-auto bg-[var(--color-primary)] text-[var(--color-primary-foreground)] hover:bg-[var(--color-primary)]/90"
                 >
                   <a
-                    href={waLink(
+                    href={waLinkTo(
+                      FRANCHISE_WA_NUMBER,
                       `Halo, saya tertarik dengan Franchise ${pkg.name}`
                     )}
                   >

@@ -1,4 +1,5 @@
-import { GununganIcon } from "@/components/gunungan-icon";
+import { OrnamentCorner } from "@/components/ornament-corner";
+import { OrnamentMark } from "@/components/ornament-mark";
 import { DriveMedia } from "@/components/drive-media";
 import { FadeInView } from "@/components/motion/fade-in-view";
 import { driveVideos } from "@/lib/media";
@@ -20,7 +21,8 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
+    <section className="relative mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
+      <OrnamentCorner className="pointer-events-none absolute inset-x-6 top-4 hidden justify-between text-[var(--color-accent)] sm:flex xl:inset-x-10" />
       <FadeInView>
       <div className="text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
@@ -34,7 +36,7 @@ export function WhyUs() {
       <div className="mt-12 grid gap-8 md:grid-cols-3">
         {reasons.map((r, i) => (
           <div key={r.title} className="relative pl-14">
-            <GununganIcon className="absolute left-0 top-0 h-10 w-9 text-[var(--color-primary)]" />
+            <OrnamentMark className="absolute left-0 top-0 h-10 w-9 text-[var(--color-primary)]" />
             <h3 className="font-heading text-lg font-semibold text-[var(--color-foreground)]">
               {i + 1}. {r.title}
             </h3>
@@ -49,7 +51,6 @@ export function WhyUs() {
         <DriveMedia
           fileId={driveVideos.whyUsVideo}
           type="video"
-          autoplay
           label="Video produk — gambar Sprite series, sesuai brief 'Kenapa memilih Es Teh Kulonan'"
           className="mx-auto max-w-4xl"
         />

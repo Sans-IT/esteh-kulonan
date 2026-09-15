@@ -10,6 +10,9 @@
  *
  * Selama value masih string kosong "", website akan menampilkan slot
  * placeholder bergaris putus-putus di posisi tersebut.
+ *
+ * Semua video tampil normal (thumbnail + tombol play), tidak ada yang
+ * autoplay di halaman manapun termasuk Beranda.
  */
 
 import { allMenuItems } from "@/lib/data"
@@ -29,7 +32,7 @@ export const drivePhotos = {
   storePhoto: "16tPcjM8X4Sat6xjL4mQJwKkAfDevN7lb", // foto tim, bagian "Tentang"
   teamPhoto1: "1Q4JsnmLyTizHwO9PpVxBQolAkyHRgdOh", // foto gerai, bagian "Tentang"
   franchisePaketA: "", // belum dikirim client
-  franchisePaketB: "", // belum dikirim client
+  franchisePaketB: "1euSo2gKr7Xnl9yJM4as9UJ6utiC_CFbp", // foto gerai paket Franchise "paket jos"
 }
 
 // Logo resmi (final) — dipakai di navbar, footer, dan bagian "Makna Logo".
@@ -43,29 +46,29 @@ export const driveMenuImages: Record<string, string> = Object.fromEntries(
 )
 
 // Foto yang sudah dikirim klien via Drive:
-driveMenuImages["teh-leci"] = "1v5BlT0Gmkt5-_O8kb6qOyrHl0waRUZ-9" // best seller es teh leci 6 ribu
+driveMenuImages["teh-leci"] = "15Ypyi51lMJ3e3JsQTjUArkyVpYhu9ooA" // "Teh lecy 6k"
 driveMenuImages["avocado"] = "1FxZeWZVtRQ1BrBTfxpX1QN51rLHIxsvK"
 driveMenuImages["coklat-milo"] = "1UbktoWHainBiZ-lZRD_E2fn9MypMe0zx"
-driveMenuImages["coklat-royal"] = "1HM1Jb_Ybkv0mbPRmBLi8IUD5JwTA1CIn"
-driveMenuImages["coklat-silverqueen"] = "1rfIXfTjzB5YPjbXF4OxJaMjmqrZfpHJM"
-driveMenuImages["kopi-aren-latte"] = "1WjaYAE5C69M6-5RDyWeKXU1Ls6ABxJvN"
-driveMenuImages["kopi-mocca"] = "1NGW-MC7BoqfnoHIj4GpG1EBcKR1Ej8Ds"
-driveMenuImages["lecy-milk-tea"] = "1HwjJicHlyqXNZ2lL1EW1ezWtSb8pw0aj"
-driveMenuImages["lemon-tea"] = "1an1oyczRjAS03pALg66IKIzEYUADx6qe"
-driveMenuImages["lemon-tea-honey"] = "1XixtfyzUkoH9Yf-q0CrziUw0RSk7VOr2"
-driveMenuImages["matcha"] = "1GiTPJ4To78d2xmQIDaaGqKCVwmKpe_xN"
-driveMenuImages["melon-milk-tea"] = "1oB41-HnPzRN-j3fp71276aeOoHN89fwF"
-driveMenuImages["mojito-lecy"] = "1xf0TT6yU1fG5CivsFQLtF2h0NwfMcweh"
-driveMenuImages["mojito-melon"] = "1Q_U5ciamKstDhPJISqJc3z5P8fisHfIg"
-driveMenuImages["mojito-jeruk"] = "1IikQYNrvZGUUWIQpsCZUlfpwsDa3IKvg"
-driveMenuImages["orange-milk-tea"] = "1CWQHcFCcED8_NsqZmsCapdrjNn7GqSIH"
-driveMenuImages["permen-karet"] = "1ZX4D-v3qSc_-tCKdBjav58LAjOE4FS2d"
-driveMenuImages["taro"] = "1XHHrYQWM0DfMmPig2wzxZKm5bgtwSMbZ"
-driveMenuImages["teh-hangat"] = "119W4djkTSxCdH3Xp68z8AszcFXoP27gG"
-driveMenuImages["teh-jeruk"] = "15Ypyi51lMJ3e3JsQTjUArkyVpYhu9ooA"
-driveMenuImages["teh-melon"] = "1m0IX6NZpE3Gf9hhQWb9LAC0qMd7ox2fm"
-driveMenuImages["ori-jumbo"] = "1JhKeBliYJPbr8B6qfoi9iYgarXt24ZHv" // "teh ORI"
-driveMenuImages["teh-susu"] = "1KoyY0TjDPQ-JleVl7i86KjiH3JquXytI"
+driveMenuImages["coklat-silverqueen"] = "1HM1Jb_Ybkv0mbPRmBLi8IUD5JwTA1CIn" // "Cocho silverking 10k"
+driveMenuImages["kopi-aren-latte"] = "1rfIXfTjzB5YPjbXF4OxJaMjmqrZfpHJM" // "Kopi aren latte 10k"
+driveMenuImages["kopi-mocca"] = "1WjaYAE5C69M6-5RDyWeKXU1Ls6ABxJvN" // "Kopi mocca"
+driveMenuImages["lecy-milk-tea"] = "1NGW-MC7BoqfnoHIj4GpG1EBcKR1Ej8Ds" // "Lecy milk tea 8k"
+driveMenuImages["lemon-tea"] = "1HwjJicHlyqXNZ2lL1EW1ezWtSb8pw0aj" // "Lemon tea 8k"
+driveMenuImages["lemon-tea-honey"] = "1an1oyczRjAS03pALg66IKIzEYUADx6qe" // "Lemon tea honey 10k"
+driveMenuImages["matcha"] = "1XixtfyzUkoH9Yf-q0CrziUw0RSk7VOr2" // "Matcha 8k"
+driveMenuImages["melon-milk-tea"] = "1GiTPJ4To78d2xmQIDaaGqKCVwmKpe_xN" // "Melon milk tea 8k"
+driveMenuImages["mojito-lecy"] = "1oB41-HnPzRN-j3fp71276aeOoHN89fwF" // "Mojito lecy"
+driveMenuImages["mojito-melon"] = "1xf0TT6yU1fG5CivsFQLtF2h0NwfMcweh" // "Mojito melon 7k"
+driveMenuImages["mojito-jeruk"] = "1Q_U5ciamKstDhPJISqJc3z5P8fisHfIg" // "Mojito orange 7k"
+driveMenuImages["orange-milk-tea"] = "1IikQYNrvZGUUWIQpsCZUlfpwsDa3IKvg" // "Orange milk tea 8k"
+driveMenuImages["permen-karet"] = "1CWQHcFCcED8_NsqZmsCapdrjNn7GqSIH" // "Permen karet 8k"
+driveMenuImages["taro"] = "1ZX4D-v3qSc_-tCKdBjav58LAjOE4FS2d" // "Taro 8k"
+driveMenuImages["teh-hangat"] = "1XHHrYQWM0DfMmPig2wzxZKm5bgtwSMbZ" // "Teh hangat 4k"
+driveMenuImages["teh-jeruk"] = "119W4djkTSxCdH3Xp68z8AszcFXoP27gG" // "Teh jeruk 6k"
+driveMenuImages["teh-melon"] = "1m0IX6NZpE3Gf9hhQWb9LAC0qMd7ox2fm" // "Teh melon 6k"
+driveMenuImages["ori-jumbo"] = "1JhKeBliYJPbr8B6qfoi9iYgarXt24ZHv" // "Teh ori 4k"
+driveMenuImages["teh-susu"] = "1KoyY0TjDPQ-JleVl7i86KjiH3JquXytI" // "Teh susu 6k"
+// coklat-royal: belum ada foto terkirim (ID sebelumnya salah pasang, sudah dipindah ke coklat-silverqueen)
 
 export function driveImageUrl(fileId: string) {
   // Format ini lebih stabil untuk ditampilkan langsung sebagai <img>
@@ -74,14 +77,10 @@ export function driveImageUrl(fileId: string) {
   return `https://lh3.googleusercontent.com/d/${fileId}`
 }
 
-export function driveVideoEmbedUrl(fileId: string, autoplay = false) {
+export function driveVideoEmbedUrl(fileId: string) {
   // Iframe preview Drive — ini yang paling reliable buat nampilin video
   // (langsung ada thumbnail + tombol play dari Drive sendiri, nggak
-  // kena masalah "file kegedean" kayak link download langsung).
-  // Parameter ?autoplay=1 dicoba supaya video di Beranda main sendiri —
-  // ini bukan API resmi dari Google jadi hasilnya bisa beda-beda di
-  // tiap browser (sebagian besar browser tetap butuh video di-mute dulu
-  // baru boleh autoplay, dan itu diatur oleh player Drive sendiri, bukan
-  // dari sisi kita).
-  return `https://drive.google.com/file/d/${fileId}/preview${autoplay ? "?autoplay=1" : ""}`
+  // kena masalah "file kegedean" kayak link download langsung). Video
+  // tidak diautoplay di halaman manapun — user klik play sendiri.
+  return `https://drive.google.com/file/d/${fileId}/preview`
 }

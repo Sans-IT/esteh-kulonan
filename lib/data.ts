@@ -1,6 +1,11 @@
 export const WA_NUMBER = "6281299960009";
 export const PHONE_DISPLAY = "0812-9996-0009";
 
+// Nomor kontak khusus untuk pertanyaan seputar Franchise (beda dari nomor
+// order/cabang di atas), sesuai info dari client.
+export const FRANCHISE_WA_NUMBER = "6281215700887";
+export const FRANCHISE_PHONE_DISPLAY = "0812-1570-0887";
+
 // Alamat asal berdirinya Es Teh Kulonan (2022), sesuai brief Drive.
 // Titik jualan lengkap ada di halaman /cabang (10 lokasi).
 export const HQ_ADDRESS = "Pasar Cerme, Kec. Cerme, Kabupaten Gresik, Jawa Timur";

@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { DriveMedia } from "@/components/drive-media";
+import { OrnamentCorner } from "@/components/ornament-corner";
 import { ScrollTiltImage } from "@/components/motion/scroll-tilt-image";
 import { FadeInView } from "@/components/motion/fade-in-view";
 import { driveVideos } from "@/lib/media";
@@ -7,7 +8,8 @@ import { menuAndalan } from "@/lib/data";
 
 export function MenuHighlight() {
   return (
-    <section className="border-t border-[var(--color-border)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]">
+    <section className="relative overflow-hidden border-t border-[var(--color-border)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]">
+      <OrnamentCorner className="pointer-events-none absolute inset-x-6 top-4 hidden justify-between text-[var(--color-secondary)]/70 sm:flex xl:inset-x-10" />
       <div className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
         <FadeInView>
           <div className="text-center">
@@ -43,7 +45,6 @@ export function MenuHighlight() {
             <DriveMedia
               fileId={driveVideos.menuHighlightVideoVarian}
               type="video"
-              autoplay
               label="Video produk — 6 gelas varian menu"
             />
           </ScrollTiltImage>
@@ -51,7 +52,6 @@ export function MenuHighlight() {
             <DriveMedia
               fileId={driveVideos.menuHighlightVideoChoco}
               type="video"
-              autoplay
               label="Video produk — Choco series coklat"
             />
           </ScrollTiltImage>

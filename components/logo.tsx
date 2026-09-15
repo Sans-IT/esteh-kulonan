@@ -1,5 +1,5 @@
 import { driveImageUrl, logoImage } from "@/lib/media";
-import { GununganIcon } from "@/components/gunungan-icon";
+import { OrnamentMark } from "@/components/ornament-mark";
 import { cn } from "@/lib/utils";
 
 type LogoProps = {
@@ -9,13 +9,13 @@ type LogoProps = {
 /**
  * Logo resmi Es Teh Kulonan (sudah termasuk tulisan "Es Teh Kulonan" +
  * "Asli Solo" di dalam gambarnya — lihat lib/media.ts `logoImage`).
- * Selama `logoImage` masih kosong, otomatis jatuh ke ikon gunungan
+ * Selama `logoImage` masih kosong, otomatis jatuh ke ikon ornamen
  * placeholder supaya tidak ada slot kosong yang aneh di navbar/footer.
  */
 export function Logo({ className }: LogoProps) {
   if (!logoImage) {
     return (
-      <GununganIcon className={cn("h-8 w-7 text-[var(--color-primary)]", className)} />
+      <OrnamentMark className={cn("h-8 w-7 text-[var(--color-primary)]", className)} />
     );
   }
 

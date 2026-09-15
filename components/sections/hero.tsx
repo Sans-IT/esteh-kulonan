@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { GununganIcon } from "@/components/gunungan-icon";
+import { OrnamentCorner } from "@/components/ornament-corner";
+import { OrnamentMark } from "@/components/ornament-mark";
 import { DriveMedia } from "@/components/drive-media";
 import { FadeIn } from "@/components/motion/fade-in";
 import { ScrollTiltImage } from "@/components/motion/scroll-tilt-image";
@@ -10,7 +11,8 @@ import { orderLink } from "@/lib/data";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <GununganIcon className="pointer-events-none absolute -right-24 -top-16 h-[520px] w-[480px] text-[var(--color-primary)]/[0.06]" />
+      <OrnamentMark className="pointer-events-none absolute -right-24 -top-16 h-[520px] w-[480px] text-[var(--color-primary)]/[0.06]" />
+      <OrnamentCorner className="pointer-events-none absolute inset-x-6 top-4 hidden justify-between text-[var(--color-accent)] sm:flex xl:inset-x-10" />
 
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 xl:px-10 py-16 md:grid-cols-2 md:items-center md:py-24">
         <div>
@@ -30,7 +32,7 @@ export function Hero() {
           </FadeIn>
 
           <FadeIn delay={0.24}>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-[var(--color-foreground)]/70">
+            <p className="font-body-decorative mt-6 max-w-md text-base leading-relaxed text-[var(--color-foreground)]/70">
               Nikmati kesegaran es teh kulonan yang diracik secara lokal dengan
               resep khas warisan cita rasa Solo. Rasa autentik yang kaya
               karakter di setiap tegukan, menemani setiap momen dengan
@@ -63,7 +65,6 @@ export function Hero() {
           <DriveMedia
             fileId={driveVideos.heroVideo}
             type="video"
-            autoplay
             label="Video produk — varian Sprite, sesuai brief beranda"
           />
         </ScrollTiltImage>

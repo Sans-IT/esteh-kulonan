@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { StarRating } from "@/components/star-rating";
+import { OrnamentCorner } from "@/components/ornament-corner";
 import { useReviewsQuery } from "@/lib/reviews-query";
 import { cn } from "@/lib/utils";
 
@@ -23,8 +24,9 @@ export function ReviewsPreview() {
   const marqueeItems = shouldLoop ? [...reviews, ...reviews] : reviews;
 
   return (
-    <section className="border-t border-[var(--color-border)] bg-[var(--color-muted)]/40">
-      <div className="mx-auto max-w-[1400px] px-6 py-16 text-center xl:px-10 md:py-20">
+    <section className="relative border-t border-[var(--color-border)] bg-[var(--color-muted)]/40">
+      <div className="relative mx-auto max-w-[1400px] px-6 py-16 text-center xl:px-10 md:py-20">
+        <OrnamentCorner className="pointer-events-none absolute inset-x-6 top-4 hidden justify-between text-[var(--color-accent)] sm:flex xl:inset-x-10" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
           Apa Kata Pelanggan
         </p>
