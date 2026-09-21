@@ -36,7 +36,7 @@ export function WhyUs() {
       <div className="mt-12 grid gap-8 md:grid-cols-3">
         {reasons.map((r, i) => (
           <div key={r.title} className="relative pl-14">
-            <OrnamentMark className="absolute left-0 top-0 h-10 w-9 text-[var(--color-primary)]" />
+            <OrnamentMark className="absolute left-0 top-0 h-10 w-9 text-[var(--color-ornament)]" />
             <h3 className="font-heading text-lg font-semibold text-[var(--color-foreground)]">
               {i + 1}. {r.title}
             </h3>

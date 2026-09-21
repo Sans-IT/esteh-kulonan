@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function FranchisePage() {
   return (
-    <main className="bg-[var(--color-background)] text-[var(--color-foreground)]">
+    <main className="text-[var(--color-foreground)]">
       <Navbar />
       <div className="pt-8">
         <Franchise />

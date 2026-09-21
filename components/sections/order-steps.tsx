@@ -27,7 +27,7 @@ export function OrderSteps() {
   return (
     <section className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
       <div className="text-center">
-        <OrnamentMark className="mx-auto h-9 w-8 text-[var(--color-primary)]" />
+        <OrnamentMark className="mx-auto h-9 w-8 text-[var(--color-ornament)]" />
         <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em]">
           Order
         </p>

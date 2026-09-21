@@ -31,7 +31,7 @@ export const driveVideos = {
 export const drivePhotos = {
   storePhoto: "16tPcjM8X4Sat6xjL4mQJwKkAfDevN7lb", // foto tim, bagian "Tentang"
   teamPhoto1: "1Q4JsnmLyTizHwO9PpVxBQolAkyHRgdOh", // foto gerai, bagian "Tentang"
-  franchisePaketA: "", // belum dikirim client
+  franchisePaketA: "1EZURl4_4aNcfIjFfTyKMqzKoGLU0zk7J", // foto gerai Paket A (Ekonomis)
   franchisePaketB: "1euSo2gKr7Xnl9yJM4as9UJ6utiC_CFbp", // foto gerai paket Franchise "paket jos"
 }
 
@@ -48,7 +48,7 @@ export const driveMenuImages: Record<string, string> = Object.fromEntries(
 // Foto yang sudah dikirim klien via Drive:
 driveMenuImages["teh-leci"] = "15Ypyi51lMJ3e3JsQTjUArkyVpYhu9ooA" // "Teh lecy 6k"
 driveMenuImages["avocado"] = "1FxZeWZVtRQ1BrBTfxpX1QN51rLHIxsvK"
-driveMenuImages["coklat-milo"] = "1UbktoWHainBiZ-lZRD_E2fn9MypMe0zx"
+driveMenuImages["coklat-milo"] = "" // belum ada foto yang benar dari client (ID lama ternyata foto Choco royal)
 driveMenuImages["coklat-silverqueen"] = "1HM1Jb_Ybkv0mbPRmBLi8IUD5JwTA1CIn" // "Cocho silverking 10k"
 driveMenuImages["kopi-aren-latte"] = "1rfIXfTjzB5YPjbXF4OxJaMjmqrZfpHJM" // "Kopi aren latte 10k"
 driveMenuImages["kopi-mocca"] = "1WjaYAE5C69M6-5RDyWeKXU1Ls6ABxJvN" // "Kopi mocca"
@@ -68,7 +68,7 @@ driveMenuImages["teh-jeruk"] = "119W4djkTSxCdH3Xp68z8AszcFXoP27gG" // "Teh jeruk
 driveMenuImages["teh-melon"] = "1m0IX6NZpE3Gf9hhQWb9LAC0qMd7ox2fm" // "Teh melon 6k"
 driveMenuImages["ori-jumbo"] = "1JhKeBliYJPbr8B6qfoi9iYgarXt24ZHv" // "Teh ori 4k"
 driveMenuImages["teh-susu"] = "1KoyY0TjDPQ-JleVl7i86KjiH3JquXytI" // "Teh susu 6k"
-// coklat-royal: belum ada foto terkirim (ID sebelumnya salah pasang, sudah dipindah ke coklat-silverqueen)
+driveMenuImages["coklat-royal"] = "1UbktoWHainBiZ-lZRD_E2fn9MypMe0zx" // "Choco royal 10k"
 
 export function driveImageUrl(fileId: string) {
   // Format ini lebih stabil untuk ditampilkan langsung sebagai <img>

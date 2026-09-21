@@ -19,7 +19,7 @@ const ctaLinks = [
 
 export default function Home() {
   return (
-    <main className="bg-[var(--color-background)] text-[var(--color-foreground)]">
+    <main className="text-[var(--color-foreground)]">
       <Navbar />
       <Hero />
       <BrandStory />
@@ -29,7 +29,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
         <div className="text-center">
-          <OrnamentMark className="mx-auto h-9 w-8 text-[var(--color-primary)]" />
+          <OrnamentMark className="mx-auto h-9 w-8 text-[var(--color-ornament)]" />
           <h2 className="font-heading mt-4 text-2xl font-semibold sm:text-3xl">Jelajahi Lebih Lanjut</h2>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

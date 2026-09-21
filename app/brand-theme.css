@@ -17,6 +17,11 @@
   --color-muted: #fef9c3;
   --color-border: #fde68a;
 
+  /* Warna ornamen/ikon motif: emas yang lebih dalam dari --color-primary
+     supaya siluetnya terbaca di atas krem (kontras ±3.2:1), tapi tetap
+     hangat & tidak menyilaukan. */
+  --color-ornament: #b8860b;
+
   --gunungan-line: #fffdf5;
 }
 
@@ -33,11 +38,20 @@
   --color-muted: #2a2110;
   --color-border: #3a2e10;
 
+  --color-ornament: #eab308;
+
   --gunungan-line: #1c1608;
 }
 
 html {
   color-scheme: light dark;
+}
+
+/* Warna latar halaman ikut warna brand. Dipasang di <body> (bukan di <main>)
+   supaya watermark BackgroundPattern (fixed, z -10) tidak tertutup lapisan
+   solid dan motifnya benar-benar kelihatan. */
+body {
+  background-color: var(--color-background);
 }
 
 /* Font dekoratif untuk paragraf narasi/isi-penjelasan (cerita brand, tentang

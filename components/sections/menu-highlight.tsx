@@ -9,7 +9,7 @@ import { menuAndalan } from "@/lib/data";
 export function MenuHighlight() {
   return (
     <section className="relative overflow-hidden border-t border-[var(--color-border)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]">
-      <OrnamentCorner className="pointer-events-none absolute inset-x-6 top-4 hidden justify-between text-[var(--color-secondary)]/70 sm:flex xl:inset-x-10" />
+      <OrnamentCorner className="pointer-events-none absolute inset-x-6 top-4 hidden justify-between text-[var(--color-primary-foreground)]/60 sm:flex xl:inset-x-10" />
       <div className="mx-auto max-w-[1400px] px-6 xl:px-10 py-16 md:py-20">
         <FadeInView>
           <div className="text-center">

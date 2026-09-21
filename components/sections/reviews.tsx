@@ -84,7 +84,7 @@ export function Reviews() {
     <section className="mx-auto max-w-6xl px-6 py-16 xl:px-10 md:py-20">
       <FadeIn>
         <div className="text-center">
-          <OrnamentMark className="mx-auto h-9 w-8 text-[var(--color-primary)]" />
+          <OrnamentMark className="mx-auto h-9 w-8 text-[var(--color-ornament)]" />
           <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
             Ulasan
           </p>

@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function OrderPage() {
   return (
-    <main className="bg-[var(--color-background)] text-[var(--color-foreground)]">
+    <main className="text-[var(--color-foreground)]">
       <Navbar />
       <Suspense
         fallback={

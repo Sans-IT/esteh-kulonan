@@ -21,7 +21,7 @@ function OrnamentShape({ flip }: { flip?: boolean }) {
   return (
     <span
       aria-hidden="true"
-      className="block h-10 w-10 bg-current opacity-70 sm:h-14 sm:w-14"
+      className="block h-10 w-10 bg-current opacity-80 sm:h-14 sm:w-14 dark:opacity-60"
       style={{
         WebkitMaskImage: "url(/ornaments/corner-ornament.svg)",
         maskImage: "url(/ornaments/corner-ornament.svg)",

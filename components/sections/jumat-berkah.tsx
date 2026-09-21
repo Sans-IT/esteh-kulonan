@@ -9,7 +9,7 @@ export function JumatBerkah() {
       <FadeInView>
         <div className="grid items-center gap-10 rounded-3xl bg-[var(--color-secondary)]/10 p-8 md:grid-cols-2 md:p-12">
           <div>
-            <OrnamentMark className="h-10 w-9 text-[var(--color-secondary)]" />
+            <OrnamentMark className="h-10 w-9 text-[var(--color-ornament)]" />
             <h2 className="font-heading mt-4 text-2xl font-semibold text-[var(--color-foreground)] sm:text-3xl">
               Jumat Berkah
             </h2>

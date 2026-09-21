@@ -11,7 +11,7 @@ import { orderLink } from "@/lib/data";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <OrnamentMark className="pointer-events-none absolute -right-24 -top-16 h-[520px] w-[480px] text-[var(--color-primary)]/[0.06]" />
+      <OrnamentMark className="pointer-events-none absolute -right-24 -top-16 h-[520px] w-[480px] text-[var(--color-ornament)]/[0.18] dark:text-[var(--color-ornament)]/[0.12]" />
       <OrnamentCorner className="pointer-events-none absolute inset-x-6 top-4 hidden justify-between text-[var(--color-accent)] sm:flex xl:inset-x-10" />
 
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 xl:px-10 py-16 md:grid-cols-2 md:items-center md:py-24">
