@@ -8,7 +8,7 @@ export function BackgroundPattern() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 -z-10 opacity-[0.09] dark:opacity-[0.10]"
+      className="pointer-events-none fixed inset-0 -z-10 opacity-[0.020] dark:opacity-[0.035]"
       style={{
         backgroundColor: "var(--color-foreground)",
         WebkitMaskImage: "url(/patterns/parang-sederhana.png)",

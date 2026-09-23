@@ -48,7 +48,7 @@ export const driveMenuImages: Record<string, string> = Object.fromEntries(
 // Foto yang sudah dikirim klien via Drive:
 driveMenuImages["teh-leci"] = "15Ypyi51lMJ3e3JsQTjUArkyVpYhu9ooA" // "Teh lecy 6k"
 driveMenuImages["avocado"] = "1FxZeWZVtRQ1BrBTfxpX1QN51rLHIxsvK"
-driveMenuImages["coklat-milo"] = "" // belum ada foto yang benar dari client (ID lama ternyata foto Choco royal)
+driveMenuImages["coklat-milo"] = "1fDkW-Ha81KZ6ONmyM6kDhuv19DCNGW2a" // "Choco Milo 10k"
 driveMenuImages["coklat-silverqueen"] = "1HM1Jb_Ybkv0mbPRmBLi8IUD5JwTA1CIn" // "Cocho silverking 10k"
 driveMenuImages["kopi-aren-latte"] = "1rfIXfTjzB5YPjbXF4OxJaMjmqrZfpHJM" // "Kopi aren latte 10k"
 driveMenuImages["kopi-mocca"] = "1WjaYAE5C69M6-5RDyWeKXU1Ls6ABxJvN" // "Kopi mocca"
